@@ -14,18 +14,45 @@
 //    }
 //}
 
+//import java.util.*;
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        int input = sc.nextInt();
+//        int initialValur = 0;
+//        int count = 0;
+//        while(initialValur <= input){
+//            count = count + initialValur;
+//            System.out.println("Current No: "+initialValur+" Count: " + count);
+//            initialValur++;
+////            While loop End Here
+//        }
+//    }
+//}
+
+//import java.util.*;
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        for (int i = 0; i<=10; i++){
+//            System.out.println("Hello World");
+//        }
+//
+//    }
+//}
+
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int input = sc.nextInt();
-        int initialValur = 0;
-        int count = 0;
-        while(initialValur <= input){
-            count = count + initialValur;
-            System.out.println("Current No: "+initialValur+" Count: " + count);
-            initialValur++;
-//            While loop End Here
+        int number = sc.nextInt();
+        int reverseNumber = 0;
+        while(number > 0){
+            int lastDigit = number % 10;
+//            System.out.print(lastDigit);
+            reverseNumber = (reverseNumber * 10) + lastDigit;
+            number = number/10;
         }
+        System.out.println(reverseNumber);
     }
 }
