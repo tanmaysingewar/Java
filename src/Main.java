@@ -25,6 +25,7 @@ public class Main {
             count = count + initialValur;
             System.out.println("Current No: "+initialValur+" Count: " + count);
             initialValur++;
+//            While loop End Here
         }
     }
 }
