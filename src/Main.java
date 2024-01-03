@@ -41,18 +41,34 @@
 //    }
 //}
 
+//import java.util.*;
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        int number = sc.nextInt();
+//        int reverseNumber = 0;
+//        while(number > 0){
+//            int lastDigit = number % 10;
+////            System.out.print(lastDigit);
+//            reverseNumber = (reverseNumber * 10) + lastDigit;
+//            number = number/10;
+//        }
+//        System.out.println(reverseNumber);
+//    }
+//}
+
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int number = sc.nextInt();
-        int reverseNumber = 0;
-        while(number > 0){
-            int lastDigit = number % 10;
-//            System.out.print(lastDigit);
-            reverseNumber = (reverseNumber * 10) + lastDigit;
-            number = number/10;
+        int num = 1;
+        while (true){
+            num = sc.nextInt();
+            if((num % 10) == 0){
+                System.out.println("No number will be displayed");
+                continue;
+            }
+            System.out.println(num);
         }
-        System.out.println(reverseNumber);
     }
 }
