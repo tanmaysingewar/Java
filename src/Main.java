@@ -57,18 +57,42 @@
 //    }
 //}
 
+//import java.util.*;
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        int num = 1;
+//        while (true){
+//            num = sc.nextInt();
+//            if((num % 10) == 0){
+//                System.out.println("No number will be displayed");
+//                continue;
+//            }
+//            System.out.println(num);
+//        }
+//    }
+//}
+
 import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int num = 1;
-        while (true){
-            num = sc.nextInt();
-            if((num % 10) == 0){
-                System.out.println("No number will be displayed");
-                continue;
+        int number = sc.nextInt();
+
+        boolean isPrime = true;
+
+        for (int i = 2; i >= number; i++){
+            if(number % i == 0){
+                isPrime = false;
+                break;
             }
-            System.out.println(num);
+        }
+
+        if (isPrime){
+            System.out.println("Number is non Prime");
+        }
+        else {
+            System.out.println("Number is Prime !!");
         }
     }
 }
