@@ -57,21 +57,6 @@
 //    }
 //}
 
-//import java.util.*;
-//public class Main {
-//    public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//        int num = 1;
-//        while (true){
-//            num = sc.nextInt();
-//            if((num % 10) == 0){
-//                System.out.println("No number will be displayed");
-//                continue;
-//            }
-//            System.out.println(num);
-//        }
-//    }
-//}
 
 //import java.util.*;
 //public class Main {
