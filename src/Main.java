@@ -59,12 +59,50 @@ public class Main{
             System.out.println(" ");
         }
     }
+    public static void butterfly(int num){
+        // 1st half
+        for (int i = 1; i <= num; i++) {
+            // Stars
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            // Spaces
+            for (int j = 1; j <= 2*(num-i); j++) {
+                System.out.print(" ");
+            }
+            // Stars
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        //2nd half
+        for (int i = num; i >= 1; i--) {
+            // Stars
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            // Spaces
+            for (int j = 1; j <= 2*(num-i); j++) {
+                System.out.print(" ");
+            }
+            // Stars
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+
     public static void main(String[] args) {
 //        hollow_rectangle(4,4);
 //        inv_rot_pyramid(4,4);
 //        inv_half_pyramid(4,4);
-        floyd_triangle(5);
+//        floyd_triangle(5);
 //        static_triangle(5);
+        butterfly(5);
     }
 
 }
