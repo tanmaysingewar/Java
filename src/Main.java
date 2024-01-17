@@ -109,6 +109,23 @@ public class Main{
 
     }
 
+    public static void hollow_rhombus(int n){
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= (n-i); j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <=n ; j++) {
+                if (i == 1 || i == n || j == 1 || j == n){
+                    System.out.print("*");
+                }
+                else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+
 
     public static void main(String[] args) {
 //        hollow_rectangle(4,4);
@@ -117,7 +134,8 @@ public class Main{
 //        floyd_triangle(5);
 //        static_triangle(5);
 //        butterfly(5);
-        solid_rhombus(5);
+//        solid_rhombus(5);
+        hollow_rhombus(5);
     }
 
 }
