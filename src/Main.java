@@ -188,6 +188,21 @@ public class Main{
         }
     }
 
+    public static void sub_array(int[] array){
+        int ts = 0;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i; j < array.length; j++) {
+                for (int k = i; k <= j; k++) {
+                    System.out.print("["+array[k]+"]");
+                }
+                ts ++;
+                System.out.println();
+            }
+        }
+
+        System.out.println("Total Sub array : " + ts);
+    }
+
     public static void main(String[] args) {
         int[] array = {1,2,3,4,5,6};
 //        int res = linearSearch(array,4);
@@ -195,7 +210,7 @@ public class Main{
 //        int res = binarySearch(array, 3);
 //        System.out.println(res);
 //        reverse(array);
-        pari_array(array);
+        sub_array(array);
 
     }
 }
