@@ -126,16 +126,22 @@ public class Main{
         }
     }
 
-
-    public static void main(String[] args) {
-//        hollow_rectangle(4,4);
-//        inv_rot_pyramid(4,4);
-//        inv_half_pyramid(4,4);
-//        floyd_triangle(5);
-//        static_triangle(5);
-//        butterfly(5);
-//        solid_rhombus(5);
-        hollow_rhombus(5);
+    public static int linearSearch(int array[], int num){
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == num) {
+                return i;
+            }
+        }
+        return -1;
     }
 
+
+
+    public static void main(String[] args) {
+        int[] array = {1,2,3,4,5,6,7};
+//        int res = linearSearch(array,4);
+//        int res = maxInArray(array);
+//        int res = binarySearch(array, 3);
+//        System.out.println(res);
+    }
 }
