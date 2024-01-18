@@ -179,16 +179,23 @@ public class Main{
         }
     }
 
+    public static void pari_array(int[] array){
+        for (int i = 0; i < array.length ; i++) {
+            for (int j = i + 1; j < array.length ; j++) {
+                System.out.print("["+array[i] +","+ array[j]+"]");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         int[] array = {1,2,3,4,5,6};
 //        int res = linearSearch(array,4);
 //        int res = maxInArray(array);
 //        int res = binarySearch(array, 3);
 //        System.out.println(res);
-        reverse(array);
+//        reverse(array);
+        pari_array(array);
 
-        for (int i = 0; i < array.length ; i++) {
-            System.out.print(array[i]);
-        }
     }
 }
