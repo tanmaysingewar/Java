@@ -185,7 +185,6 @@ public class Main{
 //        int res = maxInArray(array);
 //        int res = binarySearch(array, 3);
 //        System.out.println(res);
-
         reverse(array);
 
         for (int i = 0; i < array.length ; i++) {
