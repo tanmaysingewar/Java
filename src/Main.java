@@ -135,7 +135,15 @@ public class Main{
         return -1;
     }
 
-
+    public static int maxInArray(int[] array){
+        int maxNum = Integer.MIN_VALUE;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > maxNum){
+                maxNum = array[i];
+            }
+        }
+        return maxNum;
+    }
 
     public static void main(String[] args) {
         int[] array = {1,2,3,4,5,6,7};
