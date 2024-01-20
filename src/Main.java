@@ -241,23 +241,48 @@ public class Main{
             if (currentSum < 0) {
                 currentSum = 0;
             }
-
             maxSum = Math.max(currentSum, maxSum);
         }
-
         System.out.println("Max Sum : "+ maxSum);
+    }
+
+    public static int trappedRainwater(int[] height){
+        // Calculate max left boundary
+        int[] leftMax = new int[height.length];
+        leftMax[0] = height[0];
+        for (int i = 1; i < height.length; i++) {
+            leftMax[i] = Math.max(leftMax[i-1], height[i]);
+        }
+//        Calculate max right boundary
+        int[] rightMax = new int[height.length];
+        rightMax[height.length-1] = height[height.length - 1];
+        for (int i = height.length- 2; i >= 0 ; i--) {
+            rightMax[i] = Math.max(height[i],rightMax[i+1]);
+        }
+//        loop
+        int trappedWater = 0;
+        for (int i = 0; i < height.length; i++) {
+//        waterLevel = min(leftMax, rightMax)
+            int waterLevel = Math.min(leftMax[i],rightMax[i]);
+//        trapped water = waterLevel - height[i]
+            trappedWater += waterLevel - height[i];
+        }
+        return trappedWater;
+
     }
 
 
 
     public static void main(String[] args) {
-        int[] array = {-2,-3,4,-1,-2,1,5,-3};
+//        int[] array = {-2,-3,4,-1,-2,1,5,-3};
 //        int res = linearSearch(array,4);
 //        int res = maxInArray(array);
 //        int res = binarySearch(array, 3);
 //        System.out.println(res);
 //        reverse(array);
 //        kadanes(array);
+//        int[] height = {4,2,0,6,3,2,5};
+//        System.out.println("Trapped water is : "+trappedRainwater(height));
 
     }
 }
