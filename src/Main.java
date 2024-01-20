@@ -190,27 +190,59 @@ public class Main{
 
     public static void sub_array(int[] array){
         int ts = 0;
+        int maxSum = Integer.MIN_VALUE;
         for (int i = 0; i < array.length; i++) {
             for (int j = i; j < array.length; j++) {
+                int sum = 0;
                 for (int k = i; k <= j; k++) {
+                    sum = sum + array[k];
+                    maxSum = Math.max(sum, maxSum);
                     System.out.print("["+array[k]+"]");
                 }
                 ts ++;
+                System.out.print(" -> "+sum);
                 System.out.println();
             }
         }
-
         System.out.println("Total Sub array : " + ts);
+        System.out.println("Maximum sum : " + maxSum);
     }
 
+    public static void max_sum_prefix(int[] arr){
+
+        int[] prefix = new int[arr.length];
+
+        int currSum = Integer.MIN_VALUE;
+        int maxSum = Integer.MIN_VALUE;
+
+
+        prefix[0] = arr[0];
+
+        for (int i = 1; i < arr.length; i++) {
+            prefix[i] = prefix[i-1] + arr[i];
+        }
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i; j < arr.length; j++) {
+                currSum = i == 0 ? prefix[j] : prefix[j] - prefix[i];
+
+                if (maxSum < currSum){
+                    maxSum = currSum;
+                }
+            }
+        }
+        System.out.print("max sum = " + maxSum);
+    }
+
+
+
     public static void main(String[] args) {
-        int[] array = {1,2,3,4,5,6};
+        int[] array = {-2,-3,4,-1,-2,1,5,-3};
 //        int res = linearSearch(array,4);
 //        int res = maxInArray(array);
 //        int res = binarySearch(array, 3);
 //        System.out.println(res);
 //        reverse(array);
-        sub_array(array);
+//        kadanes(array);
 
     }
 }
