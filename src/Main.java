@@ -287,6 +287,10 @@ public class Main{
         return maxProfit;
     }
 
+    public static void jaiShreeRam(){
+        System.out.println("Jai Shree Ram");
+    }
+
 
     public static void main(String[] args) {
 //        int[] array = {-2,-3,4,-1,-2,1,5,-3};
@@ -299,6 +303,7 @@ public class Main{
 //        int[] height = {4,2,0,6,3,2,5};
 //        System.out.println("Trapped water is : "+trappedRainwater(height));
             int [] prices = {7,1,5,3,6,4};
-        System.out.println("Max Profile is : "+ buyAndSellStocks(prices));
+//        System.out.println("Max Profile is : "+ buyAndSellStocks(prices));
+        jaiShreeRam();
     }
 }
