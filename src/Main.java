@@ -353,7 +353,9 @@ public class Main{
 //        jaiShreeRam();
 //        bubbleSort(prices);
 //        printArr(prices);
-        insertionSort(prices);
+
+        Arrays.sort(prices);
+//        insertionSort(prices);
         printArr(prices);
     }
 
