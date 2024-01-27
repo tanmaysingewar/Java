@@ -323,6 +323,19 @@ public class Main{
             System.out.print(arr[i]);
         }
     }
+    
+    
+    public static void insertionSort(int[] arr){
+        for (int i = 1; i < arr.length ; i++) {
+            int curr = arr[i];
+            int pre = i -1;
+            while (pre >= 0 && arr[pre] < curr){
+                arr[pre+1] = arr[pre];
+                pre--;
+            }
+            arr[pre +1] = curr;
+        }
+    }
 
 
     public static void main(String[] args) {
@@ -338,7 +351,9 @@ public class Main{
             int [] prices = {7,1,5,3,6,4};
 //        System.out.println("Max Profile is : "+ buyAndSellStocks(prices));
 //        jaiShreeRam();
-        bubbleSort(prices);
+//        bubbleSort(prices);
+//        printArr(prices);
+        insertionSort(prices);
         printArr(prices);
     }
 
