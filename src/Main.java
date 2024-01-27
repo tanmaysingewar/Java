@@ -337,6 +337,30 @@ public class Main{
         }
     }
 
+    public static int diagonalSum(int[][] matrix){
+        int sum = 0;
+//        for (int i = 0; i < matrix.length; i++) {
+//            for (int j = 0; j < matrix[0].length; j++) {
+//                if(i == j){
+//                    sum += matrix[i][j];
+//                }
+//                if(i+j == matrix.length-1){
+//                    sum += matrix[i][j];
+//                }
+//            }
+//        }
+
+        for (int i = 0; i < matrix.length; i++) {
+            //pd
+            sum += matrix[i][i];
+            // sd
+            if(i != matrix.length - 1 -i)
+                sum += matrix[i][matrix.length-i-1];
+        }
+
+        return sum;
+    }
+
 
     public static void main(String[] args) {
 //        int[] array = {-2,-3,4,-1,-2,1,5,-3};
@@ -348,15 +372,23 @@ public class Main{
 //        kadanes(array);
 //        int[] height = {4,2,0,6,3,2,5};
 //        System.out.println("Trapped water is : "+trappedRainwater(height));
-            int [] prices = {7,1,5,3,6,4};
+        int [] prices = {7,1,5,3,6,4};
 //        System.out.println("Max Profile is : "+ buyAndSellStocks(prices));
 //        jaiShreeRam();
 //        bubbleSort(prices);
 //        printArr(prices);
 
-        Arrays.sort(prices);
+        int[][] matrix ={{1,2,3,4},
+                        {5,6,7,8},
+                        {9,10,11,12},
+                        {13,14,15,16}};
+
+//        Arrays.sort(prices);
 //        insertionSort(prices);
-        printArr(prices);
+//        printArr(prices);
+        System.out.println(diagonalSum(matrix));
+
     }
+
 
 }
