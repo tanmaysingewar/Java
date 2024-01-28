@@ -361,34 +361,37 @@ public class Main{
         return sum;
     }
 
+    public static boolean staircaseSearch(int[][] matrix,int key){
+        int row= 0 , col = matrix.length -1;
+        while (row < matrix.length && col >= 0){
+            if(matrix[row][col] == key){
+                System.out.println("Found at ["+row+","+col+"]");
+                return true;
+            }else if (key < matrix[row][col]){
+                col --;
+            }else {
+                row ++;
+            }
+        }
 
-    public static void main(String[] args) {
-//        int[] array = {-2,-3,4,-1,-2,1,5,-3};
-//        int res = linearSearch(array,4);
-//        int res = maxInArray(array);
-//        int res = binarySearch(array, 3);
-//        System.out.println(res);
-//        reverse(array);
-//        kadanes(array);
-//        int[] height = {4,2,0,6,3,2,5};
-//        System.out.println("Trapped water is : "+trappedRainwater(height));
-        int [] prices = {7,1,5,3,6,4};
-//        System.out.println("Max Profile is : "+ buyAndSellStocks(prices));
-//        jaiShreeRam();
-//        bubbleSort(prices);
-//        printArr(prices);
-
-        int[][] matrix ={{1,2,3,4},
-                        {5,6,7,8},
-                        {9,10,11,12},
-                        {13,14,15,16}};
-
-//        Arrays.sort(prices);
-//        insertionSort(prices);
-//        printArr(prices);
-        System.out.println(diagonalSum(matrix));
+        return false;
 
     }
 
 
+
+    public static boolean isPalindrome(String str){
+        for (int i = 0; i < str.length()/2; i++) {
+            if(str.charAt(i) != str.charAt(str.length() - i -1)){
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    public static void main(String[] args) {
+        String str = "roorm";
+        System.out.println(isPalindrome(str));
+    }
 }
